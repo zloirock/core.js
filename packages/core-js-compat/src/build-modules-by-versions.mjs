@@ -8,7 +8,7 @@ for (const version of Object.values(modulesByVersions)) {
 }
 
 fs.writeJson(new URL('../modules-by-versions.json', import.meta.url), {
-  '3.0': [...defaults],
+  '4.0': [...defaults],
   ...modulesByVersions,
 }, { spaces: '  ' });
 
