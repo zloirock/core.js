@@ -83,4 +83,14 @@ module.exports = {
   3.11: [
     'esnext.object.has-own',
   ],
+  3.12: [
+    'esnext.array.popped',
+    'esnext.array.pushed',
+    'esnext.array.reversed',
+    'esnext.array.shifted',
+    'esnext.array.sorted',
+    'esnext.array.spliced',
+    'esnext.array.unshifted',
+    'esnext.array.with',
+  ],
 };
