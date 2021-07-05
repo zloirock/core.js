@@ -1,4 +1,4 @@
-import detective from 'detective';
+import konan from 'konan';
 import globby from 'globby';
 import { modules } from './data.mjs';
 import helpers from '../helpers.js';
@@ -12,7 +12,7 @@ async function getModulesForEntryPoint(path, parent) {
   entry.pathname += await fs.pathExists(entry) ? '/index.js' : '.js';
 
   const file = await fs.readFile(entry);
-  const result = await Promise.all(detective(file).map(dependency => {
+  const result = await Promise.all(konan(String(file)).strings.map(dependency => {
     return getModulesForEntryPoint(dependency, entry);
   }));
 
