@@ -62,9 +62,9 @@ function write(filename, content) {
 }
 
 await Promise.all([
-  write('../data.json', data),
-  write('../modules.json', modules),
-  write('../external.json', external),
+  write('../data/data.json', data),
+  write('../data/modules.json', modules),
+  write('../data/external.json', external),
 ]);
 
 // eslint-disable-next-line no-console -- output
