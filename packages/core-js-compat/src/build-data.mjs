@@ -61,6 +61,8 @@ function write(filename, content) {
   return fs.writeJson(new URL(filename, import.meta.url), content, { spaces: '  ' });
 }
 
+await fs.mkdir(new URL('../data/', import.meta.url), { recursive: true });
+
 await Promise.all([
   write('../data/data.json', data),
   write('../data/modules.json', modules),
